@@ -645,3 +645,342 @@ body {
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media (min-width: 575px) {
+
+  /* Reused style */
+
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .section-subtitle::before,
+  .section-subtitle::after { display: block;}
+
+  .section-subtitle {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+
+  /* Header */
+
+  .header .container {
+    max-width: unset;
+    padding-inline: 30px;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    position: relative;
+    z-index: -1;
+  }
+
+  .hero .shape {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .hero .shape-1 {
+    display: block;
+    right: 20px;
+    bottom: 160px;
+    opacity: 0.04;
+  }
+
+  .hero .arrow { display: block;}
+
+  .hero .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* Popular */
+
+  .popular .section-subtitle::before {
+    content: url(../images/white-right-arrow.png);
+  }
+
+  .popular .section-subtitle::after {
+    content: url(../images/white-left-arrow.png);
+  }
+
+  .popular-card .card-icon img { width: 85px;}
+
+  .popular-card .card-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+  }
+
+
+  /* menu */
+
+  .menu .section-subtitle::before { content: url(../images/right-arrow.png);}
+
+  .menu .section-subtitle::after { content: url(../images/left-arrow.png);}
+
+  .menu-item { gap: 30px;}
+
+  .menu .item-content { flex-grow: 1;}
+
+
+  /* schedule & reservation */
+
+  :is(.schedule, .reservation) .section-subtitle::before { content: url(../images/right-arrow.png);}
+
+  :is(.schedule, .reservation) .section-subtitle {
+    justify-content: flex-start;
+  }
+
+
+  /* Footer */
+
+  .footer-list:nth-child(3) { columns: 2;}
+
+  .footer-list:nth-child(3) li:first-child {
+    column-span: all;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  :root {
+
+    /* tipography */
+
+    --fontSize-1: 6rem;
+
+  }
+
+  /*reused style */
+
+  .container {
+    max-width: 720px;
+  }
+
+  /* header */
+
+  .header-action {
+    display: flex;
+    margin-inline-start: auto;
+  }
+
+  .header-action .btn { display: none;}
+
+  .header .call {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-rich-black-fogra-29);
+  }
+
+  .header .call ion-icon {
+    font-size: 2.4rem;
+    color: var(--text-sinopia);
+  }
+
+  .header .call .span { transition: var(--transition-1);}
+
+  .header .call:is(:hover, :focus-visible) .span {
+    color: var(--text-sinopia);
+  }
+
+  /* popular */
+
+  .popular .grid-list { grid-template-columns: 1fr 1fr;}
+
+  .menu-banner,
+  .reservation-banner { max-width: max-content;}
+
+  /* footer */
+
+  .footer-top .container { grid-template-columns: 1fr 1fr;}
+
+  .footer .call { --fontSize-1: 4rem;}
+
+
+
+}
+
+@media (min-width: 992px) {
+
+  /* reused style */
+
+  .container {
+    max-width: 960px;
+  }
+
+  .menu .section-wrapper,
+  .reservation .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 24px;
+  }
+
+  /* reused style */
+
+  .hero .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .hero-content { order: 0;}
+
+  .hero .shape-1 {
+    right: auto;
+    left: 100px;
+  }
+
+  .hero .shape-2 {
+    display: block;
+    opacity: 0.04;
+    right: 50px;
+    bottom: 30px;
+  }
+
+  /* menu */
+
+  .menu-item { flex-wrap: nowrap;}
+
+  /* schedule */
+
+  .schedule-banner {
+    display: block;
+    overflow: hidden;
+  }
+
+  .schedule .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .schedule .img-holder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* footer */
+
+  .copyright { margin-block-end: 0;}
+
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-bottom-list { column-gap: 20px;}
+
+}
+
+@media (min-width: 1200px) {
+
+  /* custom */
+
+  :root {
+    --fontSize-1: 10rem;
+    --fontSize-2: 4.8rem;
+
+    --section-spacing: 120px;
+  }
+
+  /* reused style */
+
+  .container { max-width: 1140px;}
+
+  .menu .section-wrapper,
+  .reservation .container { gap: 60px;}
+
+  /* header */
+
+  .header {
+    padding-block: 20px;
+  }
+
+  .navbar,
+  .navbar.active { all: unset;}
+
+  .nav-open-btn,
+  .nav-close-btn,
+  .nav-logo,
+  .overlay,
+  .navbar .btn { display: none;}
+
+  .navbar-item:not(:last-child) { border: none;}
+
+  .navbar-list {
+    display: flex;
+    gap: 40px;
+    margin-block-end: 0;
+  }
+
+  .navbar-link { transition: var(--transition-1);}
+
+  .navbar-link:is(:hover, :focus-visible) { color: var(--text-sinopia);}
+
+  .header-action {
+    margin-inline-start: 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .header-action .btn { display: flex;}
+
+  /* hero */
+
+  .shape.shape-3 {
+    display: block;
+    right: 50px;
+  }
+
+  /* popular */
+
+  .popular .grid-list { grid-template-columns: repeat(3, 1fr);}
+
+  .popular-card { padding-inline: 40px;}
+
+  /* schedule */
+
+  .reservation .shape {
+    display: block;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    opacity: 0.2;
+  }
+
+  /* footer */
+
+  .footer-top .container { grid-template: 1fr 0.6fr 1fr 0.8fr;}
+
+
+
+
+}
+
+@media (min-width: 1400px) {
+
+  /* reused style */
+
+  .container { max-width: 1320px;}
+
+  /* hero */
+
+  .hero .container { gap: 60px;}
+
+  /* schedule & reservation */
+
+  :is(.schedule, .reservation) .container { gap: 120px;}
+  
+}
+
