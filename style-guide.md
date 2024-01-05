@@ -1,4 +1,10 @@
-# Essential Stuff
+## Vica
+*Cores*
+#ED3237 
+#F2E313
+#605F62
+#FEFEFE
+#E5E5E5
 
 ## Html import links
 

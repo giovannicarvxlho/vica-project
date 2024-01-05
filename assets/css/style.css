@@ -19,11 +19,11 @@
   /* COLORS */
 
   /*background colors*/
-  --bg-sinopia: hsl(17, 100%, 44%);
-  --bg-sinopia-alpha-90: hsla(17, 100%, 44%, 0.9);
-  --bg-sinopia-alpha-7: hsla(17, 100%, 44%, 0.07);
+  --bg-sinopia: #ED3237;
+  --bg-sinopia-alpha-90: #ED3237;
+  --bg-sinopia-alpha-7: #D9D9D9;
   --bg-rich-black-fogra-29: hsl(207, 24%, 7%);
-  --bg-rich-black-rogra-29-alpha-50: hsla(207, 24%, 7%, 0.5);
+  --bg-rich-black-rogra-29-alpha-50: #67676B;
   --bg-white: hsl(0, 0%, 100%);
   --bg-isabelline: hsl(30, 43%, 97%);
   --bg-seashell: hsl(15, 80%, 96%);
@@ -339,6 +339,11 @@ body {
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
+
+.hero {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
 .hero .arrow { display: none;}
 
@@ -945,7 +950,7 @@ body {
 
   /* popular */
 
-  .popular .grid-list { grid-template-columns: repeat(3, 1fr);}
+  .popular .grid-list { grid-template-columns: repeat(2, 1fr);}
 
   .popular-card { padding-inline: 40px;}
 
