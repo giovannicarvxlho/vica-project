@@ -503,6 +503,8 @@ body {
   #RESERVATION
 \*-----------------------------------*/
 
+.reservation { background-color: var(--bg-white);}
+
 .reservation .container {
   display: grid;
   gap: 50px;
@@ -549,7 +551,7 @@ body {
 
 .footer-top .container {
   display: grid;
-  gap: 40px;
+  gap: 100px;
 }
 
 .footer-text { margin-block: 30px 20px;}
@@ -593,7 +595,7 @@ body {
 .call,
 .email { transition: var(--transition-1);}
 
-.footer .call { font-size: var(--fontSize-1);}
+.footer .call { font-size: var(--fontSize-3);}
 
 .email { margin-block-end: 20px;}
 
@@ -630,7 +632,7 @@ body {
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: var(--bg-sinopia);
+  background-color: #aa0006;
   color: var(--text-white);
   display: grid;
   place-items: center;
@@ -805,8 +807,6 @@ body {
 
   /* popular */
 
-  .popular .grid-list { grid-template-columns: 1fr 1fr;}
-
   .menu-banner,
   .reservation-banner { max-width: max-content;}
 
@@ -878,6 +878,10 @@ body {
     height: 100%;
     object-fit: cover;
   }
+
+  /* popular */
+
+  .popular .grid-list { grid-template-columns: 1fr 1fr;}
 
   /* footer */
 
