@@ -21,7 +21,7 @@
   /*background colors*/
   --bg-sinopia: #ED3237;
   --bg-sinopia-alpha-90: #ED3237;
-  --bg-sinopia-alpha-7: #D9D9D9;
+  --bg-sinopia-alpha-7: hsla(17, 100%, 44%, 0.07);
   --bg-rich-black-fogra-29: hsl(207, 24%, 7%);
   --bg-rich-black-rogra-29-alpha-50: #67676B;
   --bg-white: hsl(0, 0%, 100%);
@@ -33,9 +33,9 @@
   /*text colors*/
   --text-white: hsl(0, 0%, 100%);
   --text-black: hsl(0, 0%, 0%);
-  --text-sinopia: hsl(17, 100%, 44%);
+  --text-sinopia: #ED3237;
   --text-rich-black-fogra-29: hsl(207, 24%, 7%);
-  --text-granite-gray: hsl(0, 0%, 40%);
+  --text-granite-gray: #67676B;
 
   /*border colors*/
   --border-white: hsl(0, 0%, 100%);
@@ -134,7 +134,7 @@ html {
 
 body {
   font-family: var(--fontFamily-opensans);
-  background-color: var(--bg-white);
+  background-color: var(--bg-seashell);
   color: var(--text-granite-gray);
   font-size: var(--fontSize-6);
   line-height: 1.65;
@@ -239,9 +239,9 @@ body {
 
 .header {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: var(--bg-white);
   padding-block: 12px;
   z-index: 4;
@@ -249,9 +249,6 @@ body {
 
 .header.active {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   animation: slideIn 500ms ease-in-out forwards;
 }
 
@@ -265,6 +262,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  padding-left-right: px;
 }
 
 .nav-open-btn {
@@ -385,6 +383,11 @@ body {
   gap: 12px;
 }
 
+.popular .card-icon img {
+  width: 100px;
+  height: 100px;
+}
+
 .popular-card .card-title {
   color: var(--text-rich-black-fogra-29);
   transition: var(--transition-1);
@@ -414,6 +417,8 @@ body {
 /*-----------------------------------*\
   #MENU
 \*-----------------------------------*/
+
+.menu { background-color: var(--bg-white)}
 
 .menu .section-title { margin-block-end: 50px;}
 
@@ -466,7 +471,7 @@ body {
 
 .schedule-banner { display: none;}
 
-.schedule { background-color: var(--bg-sinopia-alpha-7);}
+.schedule { background-color: var(--bg-seashell);}
 
 .schedule .section-title { margin-block-end: 50px;}
 
@@ -716,7 +721,7 @@ body {
     content: url(../images/white-left-arrow.png);
   }
 
-  .popular-card .card-icon img { width: 85px;}
+  .popular-card .card-icon img { width: 100px;}
 
   .popular-card .card-btn {
     width: 55px;
