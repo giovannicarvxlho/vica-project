@@ -698,6 +698,15 @@ body {
   #MEDIA QUERIES
 \*-----------------------------------*/
 
+@media (max-width: 574px) {
+  .popup {
+    padding: 5px;
+  }
+
+  .popup img {
+    height: 500px;
+  }
+}
 
 @media (min-width: 575px) {
 
