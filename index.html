@@ -81,7 +81,7 @@
 
                 </ul>
 
-                <a href="#" class="btn">
+                <a href="#" class="btn" data-text="Futuramente carrinho de compras" id="comprar-btn">
                     <span class="span">Comprar</span>
 
                     <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -110,6 +110,10 @@
 
         </div>
     </header>
+
+    <div class="text-popup" id="textPopup">
+        <p id="textPopupContent"></p>
+    </div>
 
     <!--
         Main
@@ -174,7 +178,7 @@
                                     <a href="#" class="card-title">Salgados</a>
                                 </h3>
 
-                                <a href="#" class="card-btn" aria-label="View all product">
+                                <a href="#" class="card-btn" aria-label="View all product" data-image="assets/images/vica_cardapio.jpg">
                                     <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                                 </a>
 
@@ -192,7 +196,7 @@
                                     <a href="#" class="card-title">Doces</a>
                                 </h3>
 
-                                <a href="#" class="card-btn" aria-label="View all product">
+                                <a href="#" class="card-btn" aria-label="View all product" data-image="assets/images/vica_cardapio2.jpg">
                                     <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                                 </a>
 
@@ -210,7 +214,7 @@
                                     <a href="#" class="card-title">Massas</a>
                                 </h3>
 
-                                <a href="#" class="card-btn" aria-label="View all product">
+                                <a href="#" class="card-btn" aria-label="View all product" data-image="assets/images/vica_cardapio.jpg">
                                     <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                                 </a>
 
@@ -228,7 +232,7 @@
                                     <a href="#" class="card-title">Vegetarianos</a>
                                 </h3>
 
-                                <a href="#" class="card-btn" aria-label="View all product">
+                                <a href="#" class="card-btn" aria-label="View all product" data-image="assets/images/vica_cardapio.jpg">
                                     <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
                                 </a>
 
@@ -237,6 +241,12 @@
 
                     </ul>
 
+                    <div class="modal-background" id="modalBackground"></div>
+                    
+                    <div id="imagemPopup" class="popup">
+                        <img src="#" alt="Imagem Pop-up" id="imagemPopUp" />
+                    </div>
+                    
                 </div>
             </section>
 
