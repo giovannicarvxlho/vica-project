@@ -45,6 +45,7 @@ window.addEventListener("scroll", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     var btns = document.querySelectorAll('.card-btn');
+    var titles = document.querySelectorAll('.h3.title');
     var popup = document.getElementById('imagemPopup');
     var popupImage = document.getElementById('imagemPopUp');
     var modalBackgroundText = document.getElementById('modalBackgroundText');
@@ -53,6 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.addEventListener('click', function (event) {
             event.stopPropagation();
             var imagePath = btn.getAttribute('data-image');
+            popupImage.src = imagePath;
+            popup.style.display = 'block';
+            modalBackgroundText.style.display = 'block';
+        });
+    });
+
+    titles.forEach(function (title) {
+        title.addEventListener('click', function (event) {
+            event.stopPropagation();
+            var imagePath = title.getAttribute('data-image');
             popupImage.src = imagePath;
             popup.style.display = 'block';
             modalBackgroundText.style.display = 'block';
