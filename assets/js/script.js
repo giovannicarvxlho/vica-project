@@ -47,24 +47,22 @@ document.addEventListener("DOMContentLoaded", function () {
     var btns = document.querySelectorAll('.card-btn');
     var popup = document.getElementById('imagemPopup');
     var popupImage = document.getElementById('imagemPopUp');
-    var modalBackground = document.getElementById('modalBackground');
+    var modalBackgroundText = document.getElementById('modalBackgroundText');
 
     btns.forEach(function (btn) {
         btn.addEventListener('click', function (event) {
-            event.stopPropagation();  // Impede a propagação do clique para o elemento pai (o modal)
-            // Substitua o "#" pelo caminho real da imagem que deseja exibir
+            event.stopPropagation();
             var imagePath = btn.getAttribute('data-image');
             popupImage.src = imagePath;
             popup.style.display = 'block';
-            modalBackground.style.display = 'block'; // Exibe a camada de fundo escuro
+            modalBackgroundText.style.display = 'block';
         });
     });
 
-    // Fechar a imagem ao clicar fora da mesma
     document.addEventListener('click', function (event) {
         if (event.target !== popup && !popup.contains(event.target)) {
             popup.style.display = 'none';
-            modalBackground.style.display = 'none'; // Esconde a camada de fundo escuro
+            modalBackgroundText.style.display = 'none';
         }
     });
 });
