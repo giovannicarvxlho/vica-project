@@ -28,7 +28,7 @@ Embora a proposta do website não tenha sido bem-sucedida e o projeto não tenha
 
 Para executar o projeto localmente, siga estas etapas:
 
-1. Clique neste link: 
+1. Clique neste link: https://giovannicarvxlho.github.io/vica-project/
 
 ## Contribuição
 
